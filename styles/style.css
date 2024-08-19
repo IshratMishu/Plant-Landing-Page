@@ -1,0 +1,157 @@
+* {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+:root {
+    --primary-color: #194D33
+}
+
+
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6 {
+    width: 200px;
+    height: 150px;
+}
+
+.community-container {
+    background-image: url(/assets/bg\ 7.jpg);
+    background-size: cover;
+    height: 550px;
+    padding-top: 100px;
+}
+
+.community-flex1,
+.community-flex2 {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+    color: #194D33;
+}
+
+.join {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.newsletter {
+    text-align: center;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.news {
+    padding: 10px;
+    border-radius: 10px;
+    border-top: var(--primary-color);
+    border-left: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 300px;
+}
+
+.news-icon {
+    position: relative;
+    right: 35px;
+    z-index: 1;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+/* smaller device */
+@media screen and (max-width:576px) {
+
+    .image1,
+    .image2,
+    .image3,
+    .image4,
+    .image5,
+    .image6 {
+        width: 150px;
+        height: 100px;
+    }
+
+    .community-container {
+        padding-top: 10px;
+    }
+
+    .community-flex1,
+    .community-flex2 {
+        grid-template-columns: repeat(2, 150px);
+    }
+
+    .join {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .newsletter {
+        margin-left: 25px;
+        font-size: medium;
+        font-weight: 700;
+        margin-top: 30px;
+    }
+
+    .news {
+        padding: 10px;
+        border-radius: 10px;
+        width: 250px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .social {
+        gap: 0;
+        flex-direction: column;
+    }
+
+
+
+}
+
+
+/* medium device */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .community-container {
+        padding-top: 50px;
+    }
+
+    .community-flex1,
+    .community-flex2 {
+        grid-template-columns: repeat(3, 200px);
+    }
+
+    .newsletter {
+        margin-top: 10px;
+    }
+
+}
