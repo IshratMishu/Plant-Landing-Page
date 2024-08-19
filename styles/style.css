@@ -9,13 +9,157 @@
     --primary-color: #194D33
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 400px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    width: 900px;
+}
 
-.image1,
-.image2,
-.image3,
-.image4,
-.image5,
-.image6 {
+.nav-option {
+    display: flex;
+    gap: 20px;
+}
+
+.header {
+    background-image: url(/assets/bgb.jpg);
+    background-size: cover;
+    height: 700px;
+    padding-top: 40px;
+}
+
+.banner-plant {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.future {
+    font-size: 70px;
+    margin-bottom: 0;
+    text-shadow: 5px 10px var(--primary-color);
+}
+
+.dot {
+    font-size: 30px;
+    text-shadow: 5px 5px var(--primary-color);
+}
+
+.top {
+    font-size: 30px;
+    position: relative;
+    top: 25px;
+    right: 10px;
+    box-shadow: 2px 2px 2px 2px var(--primary-color);
+    padding-left: 20px;
+    padding-top: 20px;
+    text-shadow: 5px 5px var(--primary-color);
+}
+
+#plant-a {
+    width: 180px;
+    height: 180px;
+    border: 2px solid var(--primary-color);
+}
+
+.pics {
+    display: grid;
+    grid-template-columns: repeat(2, 150px) 180px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+.tree-container {
+    background-color: #cbdecb;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    padding: 150px;
+}
+
+#tree {
+    width: 150px;
+    height: 120px;
+    border: 2px solid var(--primary-color);
+}
+
+.business {
+    font-size: 30px;
+    position: relative;
+    top: 25px;
+    right: 10px;
+}
+
+.tree-impact {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+}
+
+.environment {
+    font-size: 30px;
+}
+
+.environment1 {
+    font-size: 18px;
+    color: rgb(75, 71, 71);
+}
+
+.plants-section {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.plant-heading {
+    text-align: center;
+    font-size: 30px;
+}
+
+#plant-images {
+    width: 180px;
+    height: 200px;
+}
+
+#plants-description {
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.plants {
+    display: grid;
+    grid-template-columns: repeat(5, 180px);
+    gap: 15px;
+    justify-content: center;
+}
+
+#plant-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#buy {
+    background-color: var(--primary-color);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#images {
     width: 200px;
     height: 150px;
 }
@@ -85,13 +229,83 @@
 
 /* smaller device */
 @media screen and (max-width:576px) {
+    .navbar {
+        width: 250px;
+    }
 
-    .image1,
-    .image2,
-    .image3,
-    .image4,
-    .image5,
-    .image6 {
+    .nav-option {
+        display: none;
+    }
+
+    .banner-plant {
+        flex-direction: column;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .future {
+        font-size: 30px;
+        margin-bottom: 0;
+        text-shadow: 2px 2px var(--primary-color);
+    }
+
+    .dot {
+        font-size: 18px;
+        text-shadow: 2px 2px var(--primary-color);
+    }
+
+    .top {
+        top: 10px;
+        right: 0;
+    }
+
+    #plant-a {
+        width: 130px;
+        height: 130px;
+    }
+
+    .pics {
+        grid-template-columns: repeat(2, 130px);
+    }
+
+    .brand {
+        flex-direction: column;
+    }
+
+    .tree-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #tree {
+        width: 130px;
+    }
+
+    .business {
+        top: 10px;
+        right: 0;
+    }
+
+    .tree-impact {
+        grid-template-columns: repeat(2, 130px);
+    }
+
+    .environment1 {
+        font-size: 16px;
+    }
+
+    #plant-images {
+        width: 130px;
+        height: 130px;
+    }
+
+    .plants {
+        grid-template-columns: repeat(2, 130px);
+    }
+
+    #images {
         width: 150px;
         height: 100px;
     }
@@ -133,14 +347,58 @@
         gap: 0;
         flex-direction: column;
     }
-
-
-
 }
 
 
 /* medium device */
 @media screen and (min-width:576px) and (max-width:992px) {
+    .navbar {
+        width: 600px;
+        gap: 10px;
+    }
+
+    .future {
+        font-size: 30px;
+    }
+
+    .dot {
+        font-size: 20px;
+    }
+
+    #plant-a {
+        width: 150px;
+        height: 150px;
+    }
+
+    .pics {
+        grid-template-columns: repeat(2, 130px) 150px;
+    }
+
+    .brand {
+        flex-direction: column;
+    }
+
+    .tree-container {
+        flex-direction: column;
+    }
+
+    #tree {
+        width: 150px;
+    }
+
+    .tree-impact {
+        grid-template-columns: repeat(3, 150px);
+    }
+
+    #plant-images {
+        width: 180px;
+        height: 200px;
+    }
+
+    .plants {
+        grid-template-columns: repeat(3, 180px);
+    }
+
     .community-container {
         padding-top: 50px;
     }
