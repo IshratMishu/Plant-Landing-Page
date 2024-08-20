@@ -64,7 +64,7 @@
 }
 
 .header {
-    background-image: url("/assets/bgb.jpg");
+    background-image: url("../assets/bgb.jpg");
     background-size: cover;
     height: 700px;
     padding-top: 40px;
@@ -219,7 +219,7 @@
 }
 
 .community-container {
-    background-image: url("/assets/bg\ 7.jpg");
+    background-image: url("../assets/bg\ 7.jpg");
     background-size: cover;
     height: 550px;
     padding-top: 100px;
