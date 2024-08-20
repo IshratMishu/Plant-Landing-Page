@@ -2,8 +2,9 @@
     max-width: 1536px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-
 
 :root {
     --primary-color: #194D33
@@ -12,16 +13,54 @@
 .navbar {
     display: flex;
     align-items: center;
-    gap: 400px;
     background-color: var(--primary-color);
     color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 900px;
+    gap: 400px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .nav-option {
     display: flex;
     gap: 20px;
+}
+
+.home:hover {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.store:hover {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.blog:hover {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.up:hover {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 .header {
@@ -43,23 +82,37 @@
 
 .future {
     font-size: 70px;
-    margin-bottom: 0;
     text-shadow: 5px 10px var(--primary-color);
 }
 
 .dot {
-    font-size: 30px;
-    text-shadow: 5px 5px var(--primary-color);
+    font-size: 20px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 0;
+    border-left: 0;
+    margin-top: 10px;
+}
+
+.dot:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border-top: 2px solid var(--primary-color);
+    border-left: 2px solid var(--primary-color);
 }
 
 .top {
     font-size: 30px;
     position: relative;
-    top: 25px;
-    right: 10px;
+    top: 10px;
+    left: 10px;
     box-shadow: 2px 2px 2px 2px var(--primary-color);
-    padding-left: 20px;
-    padding-top: 20px;
+    padding-left: 25px;
+    padding-top: 25px;
     text-shadow: 5px 5px var(--primary-color);
 }
 
@@ -87,7 +140,7 @@
     align-items: center;
     flex-direction: row;
     gap: 40px;
-    padding: 150px;
+    padding: 120px;
 }
 
 #tree {
@@ -125,6 +178,7 @@
 .plant-heading {
     text-align: center;
     font-size: 30px;
+    margin-bottom: 16px;
 }
 
 #plant-images {
@@ -199,6 +253,7 @@
     border-left: var(--primary-color);
     border-color: var(--primary-color);
     width: 300px;
+    margin-top: 16px;
 }
 
 .news-icon {
@@ -216,6 +271,10 @@
     padding: 30px;
 }
 
+.footer-one {
+    margin-top: 10px;
+}
+
 .social {
     display: flex;
     gap: 15px;
@@ -231,10 +290,29 @@
 @media screen and (max-width:576px) {
     .navbar {
         width: 250px;
+        gap: 10px;
     }
 
     .nav-option {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: var(--primary-color);
+        padding: 10px;
+        gap: 0;
+        border-radius: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .menu-toggle:checked~.nav-option {
+        display: flex;
     }
 
     .banner-plant {
@@ -246,18 +324,22 @@
 
     .future {
         font-size: 30px;
-        margin-bottom: 0;
+        margin-top: 20px;
         text-shadow: 2px 2px var(--primary-color);
     }
 
     .dot {
-        font-size: 18px;
-        text-shadow: 2px 2px var(--primary-color);
+        font-size: 16px;
+        padding: 5px;
+        margin-top: 16px;
+        margin-bottom: 30px;
+        border-radius: 0px;
     }
 
     .top {
-        top: 10px;
-        right: 0;
+        font-size: 25px;
+        top: 5px;
+        left: 5px;
     }
 
     #plant-a {
@@ -275,8 +357,8 @@
 
     .tree-container {
         flex-direction: column;
-        gap: 10px;
-        padding: 10px;
+        gap: 50px;
+        padding: 20px;
     }
 
     #tree {
@@ -294,6 +376,7 @@
 
     .environment1 {
         font-size: 16px;
+        margin-top: 16px;
     }
 
     #plant-images {
@@ -339,12 +422,14 @@
 
     .footer-container {
         flex-direction: column;
-        padding: 10px;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         text-align: center;
     }
 
     .social {
-        gap: 0;
+        gap: 10px;
         flex-direction: column;
     }
 }
@@ -358,11 +443,21 @@
     }
 
     .future {
-        font-size: 30px;
+        font-size: 36px;
+        text-shadow: 5px 5px var(--primary-color);
     }
 
     .dot {
-        font-size: 20px;
+        font-size: 18px;
+        padding: 5px;
+        border-radius: 0px;
+    }
+
+    .top {
+        top: 5px;
+        left: 5px;
+        padding-left: 15px;
+        padding-top: 20px;
     }
 
     #plant-a {
@@ -380,6 +475,7 @@
 
     .tree-container {
         flex-direction: column;
+        padding: 100px;
     }
 
     #tree {
@@ -401,6 +497,7 @@
 
     .community-container {
         padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .community-flex1,
@@ -409,7 +506,6 @@
     }
 
     .newsletter {
-        margin-top: 10px;
+        margin-top: 40px;
     }
-
 }
